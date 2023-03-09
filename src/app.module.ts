@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common'
-import { UserModule } from './user/user.module'
-import { ThirdPartyModule } from './third-party/third-party.module'
+import { EnvModule } from './third-party/env/env.module'
+import { TypeORMWrapperModule } from './third-party/typeorm/typeorm-wrapper.module'
 
 @Module({
-  imports: [ThirdPartyModule, UserModule]
+  imports: [EnvModule, TypeORMWrapperModule]
 })
 export class AppModule {}
